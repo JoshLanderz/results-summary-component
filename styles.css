@@ -1,0 +1,230 @@
+:root {
+    
+    /*Primary*/
+    --light-red-clr-100: hsl(0, 100%, 67%);
+    --Orangey-yellow-clr-100: hsl(39, 100%, 56%);
+    --Green-teal-clr-100: hsl(166, 100%, 37%);
+    --Cobalt-blue-clr-100: hsl(234, 85%, 45%);
+
+    /*Transparent Primary*/
+    --tr-light-red-clr-200: hsl(0, 100%, 63%, 5%);
+    --tr-Orangey-yellow-clr-200: hsl(39, 100%, 56%, 5%);
+    --tr-Green-teal-clr-200: hsl(166, 100%, 37%, 5%);
+    --tr-Cobalt-blue-clr-200: hsl(234, 85%, 45%, 5%);
+
+    /*Gradients*/
+    --result-bg-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --result-circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+    /*Neutral*/
+    --white-100: hsl(0, 0%, 100%);
+    --Pale-blue-200: hsl(221, 100%, 96%);
+    --Light-lavender-300: hsl(241, 100%, 89%);
+    --Dark-gray-blue-400: hsl(224, 30%, 27%);
+
+    --outline-red: 1px solid red;
+    --outline-pink: 1px solid pink;
+
+    --ff-Hanken-Grotesk: 'Hanken Grotesk', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: var(--ff-Hanken-Grotesk);
+    display: grid;
+    place-content: center;
+}
+
+p, h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 0;
+}
+
+.content-wrapper {
+    display: grid;
+}
+
+.your-result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--result-bg-gradient);
+    height: 320px;
+    width: 100%;
+    border-radius: 0px 0px 35px 35px;
+}
+
+.your-result-content-wrapper {
+    display: grid;
+    place-content: start;
+    place-items: center;
+    gap: 1.5rem;
+    margin-block: 1rem;
+    margin-inline: 3.75rem;
+}
+
+.your-result-heading {
+    color: var(--Light-lavender-300);
+}
+
+.your-result-circle {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 3px;
+    background-image: var(--result-circle-gradient);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.your-result-number-data {
+    color: var(--white-100);
+    font-size: 40px;
+}
+
+.your-result-number-range {
+    color: var(--Light-lavender-300);
+}
+
+.your-result-description-wrapper {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.your-result-description-heading {
+    color: var(--white-100);
+    font-size: 20px;
+    text-align: center;
+}
+
+.your-result-description-text {
+    text-align: center;
+    color: var(--Light-lavender-300);
+    max-width: 372px;
+}
+
+main {
+    max-width: 485px;
+    display: grid;
+    margin: 2rem;
+    gap: 1.5rem; 
+}
+
+.summary-wrapper {
+    display: grid;
+    gap: 1rem;
+}
+
+.summary-heading {
+    font-size: 18px;
+}
+
+.summary-element-wrapper {
+    padding: 1px;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+}
+
+.summary-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+.summary-element:nth-child(1) {
+    background-color: var(--tr-light-red-clr-200);
+}
+
+.summary-element:nth-child(2) {
+    background-color: var(--tr-Orangey-yellow-clr-200);
+}
+
+.summary-element:nth-child(3) {
+    background-color: var(--tr-Green-teal-clr-200);
+}
+
+.summary-element:nth-child(4) {
+    background-color: var(--tr-Cobalt-blue-clr-200);
+}
+
+.summary-element-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.summary-element-reaction-heading {
+    color: var(--light-red-clr-100);
+}
+
+.summary-element-memory-heading {
+    color: var(--Orangey-yellow-clr-100);
+}
+
+.summary-element-verbal-heading {
+    color: var(--Green-teal-clr-100);
+}
+
+.summary-element-visual-heading {
+    color: var(--Cobalt-blue-clr-100);
+}
+
+.summary-result-range {
+    color: hsla(0, 0%, 50%);
+}
+
+.continue-btn-wrapper {
+    width: 100%;
+}
+
+.continue-btn {
+    background-color: var(--Dark-gray-blue-400);
+    border: none;
+    border-radius: 150px;
+    width: 100%;
+    padding: 18px;
+    color: var(--white-100);
+    font-family: var(--ff-Hanken-Grotesk);
+    font-size: 16px;
+}
+
+.continue-btn:hover {
+    background-image: var(--result-bg-gradient);
+    cursor: pointer;
+}
+
+.continue-btn:focus {
+    outline: none;
+}
+
+
+@media screen and (min-width:750px) {
+
+    html, body {
+        height: 100%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        position: relative;
+        place-content: center;
+        height: 100%;
+    }
+
+    .your-result-wrapper {
+        width: 50%;
+        height: 100%;
+        border-radius: 35px;
+    }
+
+    main {
+        width: 50%; 
+    }
+}
